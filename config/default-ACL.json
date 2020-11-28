@@ -1,0 +1,10 @@
+{
+  "routers": [
+    {
+      "route": "/api/auth/login"
+    },
+    {
+      "route": "/api/auth/forgetPwd"
+    }
+  ]
+}

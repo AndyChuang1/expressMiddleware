@@ -1,15 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var defaultRouter = require('./default');
 
 /* GET users listing. */
-router.use('/default', defaultRouter);
+router.get('/login', function (req, res, next) {
+  res.json({ mag: 'Auth login' });
+});
+router.get('/forgetPwd', function (req, res, next) {
+  res.json({ msg: 'Forget password' });
+});
 
-router.use('/default', (req, res, next) => {
-  req.token = 'add token here';
-  next();
-});
-router.get('/default/token', (req, res, next) => {
-  res.json({ msg: req.token });
-});
 module.exports = router;
